@@ -1,0 +1,85 @@
+pipeline {
+    agent none
+    environment {
+        PROJECT_NAME = "altimea"
+        BRANCHNAME_REPLACE = "${env.BRANCH_NAME}"
+        BRANCHNAME  = "${BRANCHNAME_REPLACE.replaceFirst('.+?/', '').replace(' ', '-')}";
+    }
+    stages {
+        stage('Initialize') {
+           steps {
+                echo "env.BRANCH_NAME ${env.BRANCH_NAME}"
+                echo "BRANCHNAME_REPLACE ${BRANCHNAME_REPLACE}"
+                echo "env.CHANGE_BRANCH ${env.CHANGE_BRANCH}"
+                echo "FEATURE ${isFeature()}"
+           }
+        }
+        stage('Deploy in factory') {
+            agent {
+                label 'master'
+            }
+            when {
+                expression { isDevelop() || isFeature() || isDev() }
+            }
+            steps {
+                echo "Deploying project ${PROJECT_NAME} on ${BRANCHNAME} ..."
+
+                sh "docker stop ${PROJECT_NAME}_${BRANCHNAME} || true"
+                sh "docker rm ${PROJECT_NAME}_${BRANCHNAME} || true"
+
+                sh "docker build -t altimea/${PROJECT_NAME}:${BRANCHNAME} \
+                    --build-arg VDOMAIN_SERVER=${PROJECT_NAME}-${BRANCHNAME}.altimeafactory.com \
+                    ."
+
+                sh "docker run -m 1024m -d \
+                   --restart always \
+                   -e VIRTUAL_HOST=${PROJECT_NAME}-${BRANCHNAME}.altimeafactory.com \
+                   -e VIRTUAL_NETWORK=bridge \
+                   -e DATA_BASE=altimea_multi \
+                   -e LETSENCRYPT_HOST=${PROJECT_NAME}-${BRANCHNAME}.altimeafactory.com \
+                   -e LETSENCRYPT_EMAIL=hegel.chamba@altimea.com \
+                   -v /home/ubuntu/altimeafactory_efs:/efs \
+                   --name ${PROJECT_NAME}_${BRANCHNAME} \
+                   altimea/${PROJECT_NAME}:${BRANCHNAME}"
+            }
+        }
+
+        stage('Deploy in production') {
+            agent {
+                label 'master'
+            }
+            when {
+                expression { isMaster() }
+            }
+            steps([$class: 'BapSshPromotionPublisherPlugin']){
+                sshPublisher(
+                publishers: [
+                    sshPublisherDesc(
+                    configName: 'Altimea Oficial',
+                    transfers: [
+                        sshTransfer(  execCommand: 'sh deploy.sh'),
+                    ],
+                    usePromotionTimestamp: false,
+                    useWorkspaceInPromotion: false,
+                    verbose: false
+                )])
+            }
+        }
+    }
+}
+
+def isDev() {
+    return env.BRANCH_NAME == "dev"
+}
+
+def isDevelop() {
+    return env.BRANCH_NAME == "develop"
+}
+
+def isMaster() {
+    return env.BRANCH_NAME == "master"
+}
+
+def isFeature() {
+    return "${env.BRANCH_NAME.split("/")[0]}"  == 'feature'
+}
