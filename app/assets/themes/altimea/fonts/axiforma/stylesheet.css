@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-SemiBold.eot');
+    src: url('Axiforma-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Axiforma-SemiBold.woff2') format('woff2'),
+        url('Axiforma-SemiBold.woff') format('woff'),
+        url('Axiforma-SemiBold.ttf') format('truetype'),
+        url('Axiforma-SemiBold.svg#Axiforma-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Black.eot');
+    src: url('Axiforma-Black.eot?#iefix') format('embedded-opentype'),
+        url('Axiforma-Black.woff2') format('woff2'),
+        url('Axiforma-Black.woff') format('woff'),
+        url('Axiforma-Black.ttf') format('truetype'),
+        url('Axiforma-Black.svg#Axiforma-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Medium.eot');
+    src: url('Axiforma-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Axiforma-Medium.woff2') format('woff2'),
+        url('Axiforma-Medium.woff') format('woff'),
+        url('Axiforma-Medium.ttf') format('truetype'),
+        url('Axiforma-Medium.svg#Axiforma-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-ExtraBold.eot');
+    src: url('Axiforma-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Axiforma-ExtraBold.woff2') format('woff2'),
+        url('Axiforma-ExtraBold.woff') format('woff'),
+        url('Axiforma-ExtraBold.ttf') format('truetype'),
+        url('Axiforma-ExtraBold.svg#Axiforma-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Light.eot');
+    src: url('Axiforma-Light.eot?#iefix') format('embedded-opentype'),
+        url('Axiforma-Light.woff2') format('woff2'),
+        url('Axiforma-Light.woff') format('woff'),
+        url('Axiforma-Light.ttf') format('truetype'),
+        url('Axiforma-Light.svg#Axiforma-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Thin.eot');
+    src: url('Axiforma-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Axiforma-Thin.woff2') format('woff2'),
+        url('Axiforma-Thin.woff') format('woff'),
+        url('Axiforma-Thin.ttf') format('truetype'),
+        url('Axiforma-Thin.svg#Axiforma-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma';
+    src: url('Axiforma-Regular.eot');
+    src: url('Axiforma-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Axiforma-Regular.woff2') format('woff2'),
+        url('Axiforma-Regular.woff') format('woff'),
+        url('Axiforma-Regular.ttf') format('truetype'),
+        url('Axiforma-Regular.svg#Axiforma-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

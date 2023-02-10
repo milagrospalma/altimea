@@ -1,0 +1,88 @@
+# Copyright (C) 2023 altimea
+# This file is distributed under the same license as the altimea package.
+msgid ""
+msgstr ""
+"Project-Id-Version: altimea\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Altimea <apps@altimea.com>\n"
+"Last-Translator: Altimea <apps@altimea.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../404.php:2, ../templates/template-about.php:2
+msgid "Somos"
+msgstr ""
+
+#: ../archive.php:8
+msgid "BLOG"
+msgstr ""
+
+#: ../archive.php:16
+msgid "TECNOLOGÍA"
+msgstr ""
+
+#: ../archive.php:18
+msgid "ACTUALIDAD"
+msgstr ""
+
+#: ../archive.php:20
+msgid "PROYECTOS"
+msgstr ""
+
+#: ../archive.php:261
+msgid "¿Cómo Llegar?"
+msgstr ""
+
+#: ../templates/template-agile-tables.php:2
+msgid "Servicio - Agile Boards"
+msgstr ""
+
+#: ../templates/template-business-intelligence.php:2
+msgid "Servicio - Business Intelligence"
+msgstr ""
+
+#: ../templates/template-clients.php:2
+msgid "Clientes"
+msgstr ""
+
+#: ../templates/template-footer_services.php:2
+msgid "Footer - Contact Servicios"
+msgstr ""
+
+#: ../templates/template-home.php:2
+msgid "Home"
+msgstr ""
+
+#: ../templates/template-projects.php:2
+msgid "Proyectos"
+msgstr ""
+
+#: ../templates/template-service-ux.php:2
+msgid "Servicio - Service UX"
+msgstr ""
+
+#: ../templates/template-service.php:2
+msgid "Service (New)"
+msgstr ""
+
+#: ../templates/template-services.php:2
+msgid "Servicios"
+msgstr ""
+
+#: ../templates/template-software-factory.php:2
+msgid "Servicio - Software Factory"
+msgstr ""
+
+#: ../templates/template-somos-belcorp.php:2
+msgid "Proyecto - Somos Belcorp"
+msgstr ""
+
+#: ../templates/template-ux.php:2
+msgid "Servicio - UX"
+msgstr ""

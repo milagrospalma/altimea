@@ -1,0 +1,182 @@
+// tablet to xxs
+@media(max-width: 767px) {
+  .fp-section,
+  .fp-slide,
+  .fp-scrollable,
+  .fp-tableCell {
+      height: auto !important;
+  }
+  .text-center-xs {
+    text-align: center;
+  }
+
+  // Home
+  .section-content-contact {
+    .section-content-contact-info {
+      .country-info {
+        text-align: left;
+      }
+    }
+  }
+
+  .form-contact-footer {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	@include minw(xs) {
+	  display: block;
+	}
+  }
+
+  // services
+  .services-full {
+    &.open {
+      .services-full-item {
+        width: 100%;
+        height: 0;
+        &.active {
+          height: 100vh !important;
+        }
+      }
+    }
+
+    .services-full-item {
+      height: 19vh;
+	  width: 100%;
+
+      &:nth-child(1){
+        margin-top: 40px;
+      }
+    }
+
+
+  }
+  .arrow_spec {
+    float: right;
+    transform: translate(0, 50%);
+  }
+
+  .description-services-img{
+    position: relative;
+    bottom: 18%;
+    left: -70px;
+    width: 100%;
+  }
+
+  .tabs-numbers .tabs-numbers-head li:nth-child(3) a {
+    border-left: solid 2px $brand-secondary;
+    border-top: none;
+  }
+
+  // proyects
+  .section-proyectos .controls-proyect {
+    bottom: 70px;
+    .controls-icons {
+      height: 20px;
+    }
+  }
+  // clients
+  .section-content-clients {
+    padding-top: 35px;
+    min-height: 56vh;
+  }
+
+  .section-clientes {
+    .main-map {
+      padding: 0;
+    }
+    .section-content-contact {
+      .section-content-contact-map {
+        height: 23vh;
+      }
+    }
+    .section-content-contact-info {
+      height: 14vh;
+      padding: 0 10px;
+      h3 {
+        font-size: 14px;
+      }
+      .social-buttons {
+        display: none;
+      }
+
+      address {
+        font-size: 11px;
+      }
+    }
+    .btn-map {
+      display: block;
+    }
+  }
+
+  section.section-address {
+    display: none !important;
+  }
+
+  // landing ux
+  .service-steps {
+    .service-step-img {
+      position: relative;
+      height: 480px;
+    }
+  }
+  .service-step-text-caption {
+    padding: 30px 0;
+  }
+
+  .description-services-img-mb{
+    img{
+      width: 100%;
+    }
+  }
+
+  .bottom-block{
+    position: fixed;
+    bottom: 20px;
+	max-height: 120px;
+  }
+
+}
+
+// tablet to lg
+@media(min-width: 768px) {
+  .col-xs-5,
+  .col-sm-5,
+  .col-md-5,
+  .col-lg-5 {
+    min-height: 1px;
+    position: relative;
+  }
+
+  .col-lg-5 {
+    float: left;
+    width: 20%;
+  }
+
+  .mh-110{
+    min-height: 110px;
+  }
+  .mh-90{
+    min-height: 90px;
+  }
+  .mh-70{
+    min-height: 70px;
+  }
+
+  .form-contact-body{
+    width: 85%;
+    margin: 0 auto;
+    .form-group{
+      margin-top: 30px;
+    }
+  }
+
+  .fixed-bottom{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+  }
+
+}
+

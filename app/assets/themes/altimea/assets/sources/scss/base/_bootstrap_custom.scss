@@ -1,0 +1,35 @@
+.navbar {
+	margin-bottom: 0;
+	border: 0;
+}
+
+.form-control {
+	box-shadow: none !important;
+}
+
+// panels
+.btn {
+	border: 1px solid transparent !important;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+	&.btn-link {
+		box-shadow: none;
+	}
+}
+
+.img-responsive {
+	display: inline-block;
+}
+
+.modal-content {
+	border: 0;
+}
+
+.modal-backdrop {
+	z-index: -1;
+}
+
+.alert-small {
+	padding: 7px 15px;
+	position: relative;
+}

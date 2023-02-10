@@ -1,0 +1,78 @@
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-smartphone:before {
+    content: "\e906";
+}
+.icon-analytics:before {
+    content: "\e900";
+}
+.icon-digital-marketing:before {
+    content: "\e901";
+}
+.icon-facebook:before {
+    content: "\e902";
+}
+.icon-linkedin:before {
+    content: "\e903";
+}
+.icon-software-factory:before {
+    content: "\e904";
+}
+.icon-ux-solutions:before {
+    content: "\e905";
+}
+
+
+// css icons
+
+.css-icon-wrapper{
+    display: inline-block;
+    width: 40px;
+    position: relative;
+}
+
+.download.css-icon {
+    color: inherit;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 12px;
+    width: 14px;
+    height: 4px;
+    border-radius: 1px;
+    border: solid 1px currentColor;
+    border-top: none;
+    transform: scale(1.4) translateY(-10px);
+}
+.download.css-icon:before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -7px;
+    width: 1px;
+    height: 8px;
+    background-color: currentColor;
+}
+.download.css-icon:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: -4px;
+    width: 5px;
+    height: 5px;
+    border-top: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    transform: rotate(135deg);
+}

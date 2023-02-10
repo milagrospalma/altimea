@@ -1,0 +1,149 @@
+// config basic fullpage
+.iScrollVerticalScrollbar{
+	width: 3px !important;
+}
+.iScrollIndicator{
+	border: none !important;
+}
+.fp-controlArrow{
+	display: none;
+}
+
+.fp-slidesNav{
+	z-index: 1031;
+	&.top{
+		top: 70px;
+	}
+	ul{
+		li{
+			a{
+				&.active{
+					span{
+						border-radius: 0;
+						border: 1px solid $white;
+						background: $white;
+					}
+				}
+				span{
+					background: transparent;
+					border: 1px solid $white;
+					height: 12px;
+					width: 12px;
+					margin: -6px 0 0 -6px;
+					border-radius: 0;
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+}
+
+// fade slide fullpage
+.fp-slidesContainer {
+	width: 100%!important;
+	transform: none!important;
+}
+
+.fp-slide {
+	width: 100%!important;
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 0;
+	transition: all .7s ease-in-out;
+}
+
+.fp-slide.active {
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+}
+
+.slick-arrow{
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	color: transparent;
+	width: 70px;
+	height: 70px;
+	margin-top: -30px;
+	border-radius: 50%;
+	border: 0;
+	background: rgba(#000, 0.5);
+	z-index: 9;
+
+	&:before{
+		content: '';
+		width: 18px;
+		height: 18px;
+		border: 1px solid $white;
+		border-left: 0;
+		border-bottom: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	&.slick-prev{
+		left: -35px;
+		&:before{
+			margin-left: 18px;
+			transform: translate(-50%, -50%) rotate(-135deg);
+		}
+	}
+	&.slick-next{
+		right: -35px;
+		&:before{
+			margin-left: -20px;
+		}
+	}
+
+	&:hover{
+		background: $brand-secondary;
+		&.slick-prev, &.slick-next{
+			&:before{
+				border: 1px solid $brand-primary;
+				border-left: 0;
+				border-bottom: 0;
+			}
+		}
+	}
+
+}
+
+// Styling the default Slick dots
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	margin: 0 auto;
+	padding: 1rem 0;
+
+	list-style-type: none;
+
+	li {
+		margin: 0 0.25rem;
+	}
+
+	button {
+		display: block;
+		width: 14px;
+		height: 14px;
+		margin: 0 10px;
+		padding: 0;
+
+		border: none;
+		border-radius: 100%;
+		background-color: $gray-thin;
+
+		text-indent: -9999px;
+	}
+
+	li.slick-active button {
+		background-color: $brand-secondary;
+	}
+
+}

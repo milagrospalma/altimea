@@ -1,0 +1,136 @@
+.alt-footer {
+    background-color: $brand-primary;
+    color: $white;
+
+    a {
+        color: $white;
+        font-size: 14px;
+        transition: 0.5s ease;
+        text-decoration: none;
+
+        &:hover {
+            color: $brand-secondary;
+            transition: 0.5s ease;
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 30px;
+        @include minw($mq-md) {
+            flex-direction: row;
+            gap: 0;
+        }
+
+        .about-company {
+            @include minw($mq-md) {
+                display: flex;
+            }
+
+            .logo {
+                margin-right: 70px;
+
+                @include maxw($mq-sm) {
+                    margin: 0;
+                    text-align: center;
+                }
+
+                > svg {
+                    @include maxw($mq-sm) {
+                        width: 83px;
+                        height: auto;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            .alt-text {
+                @include minw($mq-md) {
+                    max-width: 330px;
+                }
+            }
+        }
+
+        .footer-menu {
+            display: none;
+            &--option {
+                margin-bottom: 3px;
+
+                @include minw($mq-md) {
+                    margin-bottom: 7px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                > a {
+                    display: inline-block;
+                    font-family: $font-axiforma-regular;
+                    padding: 10px 0;
+
+                    @include minw($mq-md) {
+                        padding: 0 0 3px 0;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            .jobs {
+                .description {
+                    color: $brand-secondary;
+                    cursor: pointer;
+                    position: relative;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    &::before,
+                    &::after {
+                        content: "";
+                        background: $brand-secondary;
+                        height: 1px;
+                        width: 100%;
+                        pointer-events: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+						transform: scaleX(0);
+						transition: transform 0.25s ease-out;
+					}
+
+                    &:hover {
+                        &::before {
+							transform: scaleX(0);
+                        }
+                        &::after {
+							transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .alt-copyright {
+        border-top: 1px solid $brand-secondary;
+        font-family: $font-axiforma-thin;
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+
+        @include minw($mq-md) {
+            font-size: 14px;
+        }
+    }
+}

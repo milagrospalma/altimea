@@ -1,0 +1,26 @@
+// section somos
+.section-somos{
+	background: $white;
+	color: $brand-primary;
+}
+
+.section-link-bottom{
+	position: relative;
+	text-transform: uppercase;
+	@include minw(1400px){
+		bottom: 15%;
+	}
+	a{
+		text-decoration: none;
+		color: $brand-primary;
+	}
+	.link-left{
+		position: absolute;
+		left: 0;
+	}
+	.link-right{
+		position: absolute;
+		right: 0;
+	}
+}
+

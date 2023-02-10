@@ -1,0 +1,851 @@
+.alt-agile-tables {
+	position: relative;
+
+	$self: &;
+
+	// General
+
+	.back-home, .back-home-services {
+		cursor: pointer;
+
+	  &--contrast {
+		color: $white;
+
+		img {
+		  margin-right: 5px;
+		  width: 20px;
+		}
+	  }
+
+	}
+
+	.alt-btn--white {
+		background-color: transparent;
+		border: 2px solid $white !important;
+		color: $white;
+
+		svg path {
+			fill: $white;
+		}
+	}
+
+	&__rectangle {
+		display: block;
+		width: 70px;
+		height: 10px;
+		background-color: $white;
+
+		&--green {
+			background-color: $brand-secondary;
+		}
+
+		@media all and (max-width: 767px) {
+			height: 6px;
+			width: 50px;
+		}
+	}
+
+	&__section1 {
+		background-image: url($imagesPath + "servicios/agile-tables/landing-main.jpg");
+		padding-top: 120px;
+
+		@media all and (min-width: 768px) {
+			background-position: 30%;
+			padding-bottom: 0;
+		}
+	}
+
+	&__section2 {
+		background: $brand-secondary;
+	}
+
+	&__section3 {
+		background: $white;
+	}
+
+	&__section4 {
+		background: #eaeaea;
+	}
+
+	&__section5 {
+		background-color: $brand-primary;
+	}
+
+	&__title {
+		font-family: Axiforma-Regular;
+		text-transform: uppercase;
+		font-weight: 200;
+		font-size: 40px;
+		color: $brand-primary;
+
+		&--big {
+			font-size: 90px;
+			color: $brand-secondary;
+			letter-spacing: 18px;
+			font-weight: 400;
+		}
+
+		&--small {
+			font-size: 24px;
+			font-weight: 700;
+		}
+
+		span {
+			padding-left: 56px;
+			font-family: Axiforma-Regular;
+		}
+
+		p {
+			padding-top: 30px;
+			font-size: 15px;
+			font-weight: 400;
+			text-transform: none;
+			font-family: Axiforma-Regular;
+			letter-spacing: 0.5px;
+		}
+
+		@media all and (max-width: 767px) {
+			font-size: 25px;
+			letter-spacing: 1px;
+
+			&--big {
+				font-size: 45px;
+			}
+
+			&--small {
+				font-size: 22px;
+			}
+
+			p {
+				padding-top: 15px;
+			}
+		}
+
+	}
+
+	&__flex {
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100%;
+		margin: auto;
+
+		&__col {
+			flex-basis: 50%;
+		}
+
+		@media all and (max-width: 767px) {
+			flex-flow: row wrap;
+
+			&__col {
+				flex-basis: 100%;
+				width: inherit;
+			}
+		}
+	}
+
+	// Section - Main
+
+	&__types {
+		display: flex;
+		flex-flow: row nowrap;
+		margin-top: 20px;
+
+		&__type {
+			background-color: $white;
+			color: $brand-primary;
+			font-family: $font-axiforma-extrabold;
+			font-weight: 600;
+			padding: 3px 30px;
+			font-size: 20px;
+
+			&:not(:last-child) {
+				margin-right: 5px;
+			}
+
+			@media all and (max-width: 767px) {
+				font-size: 18px;
+				padding: 3px 15px;
+			}
+		}
+
+	}
+
+	&__team {
+		display: block;
+
+		&--mb {
+			display: none;
+		}
+
+		@media all and (max-width: 767px) {
+			display: none;
+
+			&--mb {
+				display: block;
+				padding: 40px 0;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		color: $white;
+		display: block;
+
+		&--contrast {
+			color: $brand-primary;
+		}
+
+		@media all and (max-width: 767px) {
+			font-size: 14px;
+			margin: 0;
+			padding-bottom: 30px;
+		}
+	}
+
+	&__button {
+		width: 100%;
+		text-align: left;
+		padding-top: 42px;
+
+		@media all and (max-width: 767px) {
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			padding: 40px 0;
+		}
+	}
+
+	&__table {
+		width: 100%;
+	}
+
+	// Section - Advantages
+
+	&__advantages {
+		padding: 60px 0;
+
+		@media all and (max-width: 767px) {
+			padding: 30px 15px;
+		}
+
+		&__slides {
+			@media all and (max-width: 767px) {
+				padding-top: 20px;
+			}
+		}
+	}
+
+	&__slide {
+		min-height: auto;
+		padding: 10px 40px;
+		max-width: 580px;
+		height: 450px;
+		margin-right: 20px;
+		box-shadow: 0 10px 35px rgba(26,92,77,.2);
+		background-size: cover;
+		display: flex !important;
+		flex-flow: column nowrap;
+		justify-content: flex-end;
+		align-items: flex-start;
+		transition: background-image 0.2s ease-in-out;
+
+		&--one {
+			background-image: url($imagesPath + "servicios/agile-tables/desktop/1desk.jpg");
+
+			&:hover {
+				background-image: url($imagesPath + "servicios/agile-tables/desktop/1b-desk.jpg");
+			}
+		}
+
+		&--two {
+			background-image: url($imagesPath + "servicios/agile-tables/desktop/2desk.jpg");
+
+			&:hover {
+				background-image: url($imagesPath + "servicios/agile-tables/desktop/2b-desk.jpg");
+			}
+		}
+
+		&--three {
+			background-image: url($imagesPath + "servicios/agile-tables/desktop/3desk.jpg");
+
+			&:hover {
+				background-image: url($imagesPath + "servicios/agile-tables/desktop/3b-desk.jpg");
+			}
+		}
+
+		&--four {
+			background-image: url($imagesPath + "servicios/agile-tables/desktop/4desk.jpg");
+
+			&:hover {
+				background-image: url($imagesPath + "servicios/agile-tables/desktop/4b-desk.jpg");
+			}
+		}
+
+		&__title {
+			color: $white;
+			font-family: Axiforma;
+			font-size: 24px;
+			text-transform: uppercase;
+			padding-bottom: 25px;
+
+			span {
+				color: $brand-secondary;
+			}
+		}
+
+		&__content {
+			text-align: justify;
+			color: $white;
+			font-family: Axiforma-Regular, sans-serif;
+			font-size: 15px;
+			line-height: 22px;
+		}
+
+	}
+
+	.slick-dots {
+
+		li {
+			margin: 0;
+
+			&.slick-active button {
+				background: $brand-primary;
+			}
+		}
+
+		button {
+			width: 40px;
+			height: 8px;
+			border-radius: 0;
+			margin: 5px;
+			background: $white;
+		}
+	}
+
+	// Section - Agile Methodologies
+
+	&__methodologies {
+		padding: 60px 0;
+
+		#{$self}__flex__col {
+			&:first-child {
+				padding-right: 60px;
+			}
+		}
+
+		#{$self}__title {
+			padding-bottom: 20px;
+		}
+
+		&__graphic {
+			display: block;
+
+			&--mb {
+				display: none;
+			}
+
+			@media all and (max-width: 767px) {
+				display: none;
+
+				&--mb {
+					display: block;
+					padding-bottom: 30px;
+				}
+			}
+		}
+
+		@media all and (max-width: 767px) {
+			padding: 30px 15px;
+
+			#{$self}__flex__col {
+				&:first-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	&__methods {
+		width: 100%;
+		padding-top: 60px;
+
+		&__slide {
+			display: flex !important;
+			flex-flow: row nowrap;
+
+			&__image {
+				display: block;
+				flex-basis: 50%;
+
+				&--mb {
+					display: none;
+				}
+			}
+
+			&__content {
+				flex-basis: 50%;
+				padding: 48px 40px 0;
+				border-top: 12px solid $brand-secondary;
+			}
+
+			&__title {
+				padding-bottom: 40px;
+				color: $brand-primary;
+				font-family: Axiforma;
+				font-size: 40px;
+				font-weight: 400;
+				line-height: 50px;
+				text-transform: uppercase;
+			}
+
+			&__tag {
+				background-color: $brand-primary;
+				padding: 5px 20px;
+				color: $brand-secondary;
+				max-width: 160px;
+				text-align: center;
+				font-size: 24px;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-family: Axiforma;
+			}
+
+			&__text {
+				padding-top: 20px;
+				color: $brand-primary;
+			}
+
+			@media all and (max-width: 767px) {
+				flex-flow: row wrap;
+
+				&__image {
+					flex-basis: 100%;
+					display: none;
+
+					&--mb {
+						display: block;
+						flex-basis: 100%;
+						padding-bottom: 20px;
+					}
+				}
+
+				&__content {
+					flex-basis: 100%;
+					padding: 0;
+				}
+
+				&__title {
+					padding: 15px 0;
+					font-size: 30px;
+					line-height: 35px;
+					width: 80%;
+				}
+
+				&__tag {
+					padding: 5px 0;
+					font-size: 20px;
+					width: auto;
+				}
+			}
+
+		}
+
+		.slick-dots {
+			padding-top: 20px;
+
+			button {
+				background: $brand-primary;
+			}
+
+			li.slick-active button {
+				background: $brand-secondary;
+			}
+
+		}
+
+		&__separator {
+			display: none;
+			border-bottom: 6px solid $brand-secondary;
+			width: auto;
+			margin: 0 -15px;
+		}
+
+		@media all and (max-width: 767px) {
+			padding-top: 30px;
+
+			&__slide {
+				&__content {
+					border: none;
+				}
+			}
+
+			&__separator {
+				display: block;
+			}
+		}
+	}
+
+	// Section - Case
+
+	&__case {
+		padding-top: 60px;
+
+		&__title {
+			font-family: Axiforma-Regular;
+			text-transform: uppercase;
+			font-weight: 300;
+			letter-spacing: 1px;
+			font-size: 40px;
+			color: $brand-primary;
+
+			span {
+				font-size: 24px;
+				color: $brand-primary;
+				font-weight: 700;
+			}
+
+			@media all and (max-width: 767px) {
+				padding-top: 20px;
+			}
+		}
+
+		&__contents {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			padding: 60px 0;
+			color: $brand-primary;
+			font-family: Axiforma-Regular;
+
+			p {
+				flex-basis: calc(100% / 3);
+				text-align: center;
+				padding: 0 30px;
+
+				&:not(:first-child) {
+					border-left: 1px solid $brand-primary;
+				}
+
+				&:first-child {
+					padding: 0 30px 0 0;
+				}
+
+				&:last-child {
+					padding: 0 0 0 30px;
+				}
+			}
+		}
+
+		&__macbook {
+			&__slide {
+				img {
+					margin: auto;
+				}
+			}
+
+			.slick-dots {
+				padding-bottom: 40px;
+
+				button {
+					background: $brand-primary;
+				}
+
+				li.slick-active button {
+					background: $brand-secondary;
+				}
+			}
+		}
+
+		&__wrapper {
+			width: 100%;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+
+			@media all and (max-width: 767px) {
+				flex-flow: column nowrap;
+				justify-content: center;
+
+				#{$self}__title {
+					width: 100%;
+				}
+			}
+		}
+
+		&__accomplishments {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: flex-start;
+			color: $brand-primary;
+			font-size: 24px;
+			font-weight: 600;
+
+			p {
+				padding-top: 30px;
+				font-size: 15px;
+				font-weight: 400;
+			}
+
+			&__buttons {
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+			}
+
+			.alt-btn {
+				margin-top: 15px;
+				font-size: 15px;
+				padding: 10px 20px;
+				font-weight: 400;
+			}
+
+			@media all and (max-width: 767px) {
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				padding-bottom: 30px;
+
+				p {
+					margin: 10px 0;
+					padding: 0;
+				}
+
+				&__buttons {
+					flex-flow: row nowrap;
+					justify-content: space-between;
+				}
+
+				.alt-btn {
+					white-space: normal;
+					margin-top: 0;
+					flex-basis: 30%;
+					font-size: 12px;
+
+					&:not(:first-child) {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+
+		&__iphone {
+			padding-top: 20px;
+			width: 80%;
+
+			&__slide {
+				display: flex !important;
+				flex-flow: row nowrap;
+				align-items: center;
+				justify-content: flex-start;
+
+				img {
+					max-height: 500px;
+					width: auto;
+				}
+			}
+
+			&__content {
+				font-family: Axiforma-Regular;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 24px;
+				color: $brand-primary;
+				width: 40%;
+				margin-right: 4%;
+
+				p {
+					font-size: 22px;
+					font-weight: 400;
+					color: $brand-primary;
+					padding-bottom: 20px;
+					text-transform: none;
+					padding-top: 20px;
+				}
+			}
+
+			.slick-dots {
+				padding-bottom: 40px;
+
+				button {
+					background: $brand-primary;
+				}
+
+				li.slick-active button {
+					background: $brand-secondary;
+				}
+
+				@media all and (max-width: 767px) {
+					padding: 20px 0;
+				}
+			}
+
+			@media all and (max-width: 767px) {
+				width: 100%;
+
+				&__content {
+					width: 100%;
+					margin-right: 0;
+
+					p {
+						font-size: 15px;
+					}
+				}
+
+				&__slide {
+					flex-flow: column nowrap;
+
+					img {
+						width: 70%;
+						max-height: initial;
+						margin: auto;
+					}
+				}
+			}
+
+		}
+
+		@media all and (max-width: 767px) {
+			padding-top: 30px;
+
+			&__title {
+				font-size: 30px;
+
+				span {
+					display: none;
+				}
+			}
+
+			&__contents {
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+				padding: 30px 0;
+
+				p {
+					padding: 0 30px;
+					margin-bottom: 20px;
+
+					&:first-child,
+					&:last-child {
+						padding: 0 30px;
+					}
+
+					&:not(:first-child) {
+						border-left: none;
+					}
+				}
+			}
+		}
+
+	}
+
+	// Section - Magazines
+
+	&__magazines {
+		min-height: 600px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+
+		background-image: url($imagesPath + "servicios/agile-tables/desktop/magazines/bg.png");
+		background-size: cover;
+
+		&__title {
+			font-size: 40px;
+			letter-spacing: 1px;
+			font-family: Axiforma-Regular;
+			color: $white;
+
+			span {
+				color: $brand-secondary;
+			}
+		}
+
+		&__links {
+			width: 60%;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__link {
+			font-family: Axiforma-Regular;
+			font-size: 16px;
+			font-weight: 400;
+			text-transform: uppercase;
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			color: $white;
+			padding: 10px;
+
+			p {
+				width: 100%;
+				margin-top: 20px;
+			}
+
+			span {
+				font-size: 16px;
+				color: $brand-secondary;
+			}
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				color: $white;
+			}
+		}
+
+		&__contents {
+			width: 40%;
+			padding-right: 30px;
+
+			#{$self}__text {
+				color: $white;
+			}
+		}
+
+		@media all and (max-width: 767px) {
+			padding-top: 60px;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			background-position: -15px;
+
+			&__title {
+				font-size: 30px;
+				margin: 20px 0 0 0;
+			}
+
+			&__links {
+				width: 100%;
+			}
+
+			&__link {
+
+				p {
+					font-size: 14px;
+				}
+
+				span {
+					font-size: 12px;
+				}
+			}
+
+			&__contents {
+				width: 100%;
+
+				#{$self}__text {
+					padding: 30px 0;
+				}
+			}
+		}
+
+	}
+
+}

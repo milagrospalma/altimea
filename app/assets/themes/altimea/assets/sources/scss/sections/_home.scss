@@ -1,0 +1,641 @@
+.video-bg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-size: contain;
+	object-fit: cover;
+	z-index: -1;
+	opacity: 0.15;
+}
+
+.section-home {
+	background-color: $brand-primary;
+
+	.group-bg-img-overlay {
+		height: 100vh;
+
+		.bg-img {
+			background-position: bottom 100% right 40%;
+
+			@include minw($mq-md) {
+				background-position: bottom;
+			}
+		}
+	}
+
+	.home-container-position {
+		position: absolute;
+		height: 100%;
+		bottom: 0;
+		top: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.home-banner-flex {
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+
+	.home-content {
+		width: 100%;
+
+		@include minw($mq-md) {
+			margin: 0 6em;
+		}
+
+		.text-services {
+			color: $white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@include minw($mq-md) {
+				display: inline-block;
+				height: fit-content;
+				width: 60%;
+			}
+
+			>svg {
+				width: 55%;
+				margin-bottom: 4rem;
+
+				@include minw(800px) {
+					display: none;
+				}
+			}
+
+			.title {
+				font-family: $font-axiforma-bold;
+				font-size: 40px;
+				line-height: 1.15;
+				text-align: center;
+
+				@include minw($mq-xs) {
+					font-size: 60px;
+					width: 80%;
+				}
+
+				@include minw(800px) {
+					font-size: 50px;
+				}
+
+				@include minw($mq-sm) {
+					font-size: 60px;
+					text-align: left;
+					width: 70%;
+				}
+			}
+
+			.subtitle {
+				font-family: $font-axiforma-regular;
+				font-size: 16px;
+				line-height: 25px;
+				text-align: center;
+				width: 60%;
+				margin: 0;
+
+				@include minw($mq-xs) {
+					font-size: 24px;
+					line-height: 38px;
+					width: 70%;
+				}
+
+				@include minw(800px) {
+					font-size: 20px;
+					line-height: 30px;
+				}
+
+				@include minw($mq-sm) {
+					font-size: 24px;
+					line-height: 38px;
+					text-align: left;
+				}
+			}
+		}
+
+		.button-container {
+			margin-top: 25px;
+
+			@include minw($mq-sm) {
+				width: 70%;
+			}
+
+			@include minw($mq-md) {
+				margin-top: 30px;
+			}
+
+			.btn-home {
+				@include maxw($mq-md) {
+					color: $brand-primary;
+					background-color: $brand-secondary;
+				}
+			}
+		}
+	}
+}
+
+.section-somos {
+	height: auto !important;
+	padding: 30px 0;
+
+	@include minw($mq-sm) {
+		padding: 60px 0;
+	}
+
+	.fp-tableCell {
+		height: auto !important;
+	}
+
+	.logo-somos {
+		@include maxw($mq-xs) {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			margin-top: 7%;
+		}
+	}
+
+	.text-weare {
+		font-family: $font-axiforma-regular;
+		margin-bottom: 1em;
+
+		@include minw($mq-md) {
+			margin-bottom: 3em;
+		}
+
+		.title-weare {
+			font-family: $font-axiforma-light;
+			font-size: 2.5em;
+			text-align: left;
+			margin-top: 0;
+
+			@include minw($mq-xs) {
+				font-size: 30px;
+			}
+
+			@include minw($mq-md) {
+				font-size: 40px;
+			}
+
+			span {
+				font-family: $font-axiforma-extrabold;
+				color: $brand-secondary;
+				background-color: $brand-primary;
+				font-size: 24px;
+				padding: 5px 10px;
+				line-height: 3;
+			}
+		}
+
+		.bold-weare {
+			font-family: $font-axiforma-black;
+		}
+	}
+
+	.img-weare {
+		@include minw($mq-xs) {
+			margin: 30px 0;
+			text-align: center;
+		}
+	}
+}
+
+.section-services {
+	background-color: $brand-secondary;
+	padding: 30px 0;
+
+	&.bg-to-description {
+		background-color: $white;
+	}
+
+	.service-list {
+		list-style: none;
+		padding: 0;
+		margin: 40px 15px;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+
+		@include minw($mq-md) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 320px);
+			column-gap: 100px;
+			row-gap: 20px;
+			margin: 30px 25px;
+		}
+	}
+
+	.service-link {
+		border-radius: 30px;
+		color: $brand-primary;
+		display: inline-block;
+		text-decoration: none;
+
+		@include minw($mq-md) {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			display: block;
+			overflow: hidden;
+			transition: all .3s ease;
+		}
+
+		.serv-content {
+			@include minw($mq-md) {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				top: 0;
+				margin: auto;
+				padding: 0 30px;
+				z-index: 2;
+				height: fit-content;
+			}
+
+			img {
+				margin-bottom: 15px;
+			}
+		}
+
+		h3 {
+			font-family: $font-axiforma-bold;
+			font-size: 24px;
+			letter-spacing: normal;
+			margin: 0;
+			text-transform: initial;
+			width: 70%;
+
+			@include minw($mq-md) {
+				width: 100%;
+			}
+		}
+
+		p {
+			font-family: $font-axiforma-light;
+			font-size: 14px;
+			text-align: justify;
+
+			@include minw($mq-md) {
+				height: 0;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		span {
+			background: $brand-primary;
+			display: block;
+			margin: 12px 0;
+			height: 3px;
+			width: 57px;
+		}
+
+		@include minw($mq-md) {
+			&:hover {
+				color: $brand-secondary;
+				background: $brand-primary;
+				transition: all .3s ease;
+
+				.serv-content {
+					height: fit-content;
+				}
+
+				p {
+					height: max-content;
+					opacity: 1;
+					visibility: visible;
+					transition: all .2s ease;
+					margin: 0;
+				}
+
+				span {
+					background: $brand-secondary;
+					transition: all .2s ease;
+				}
+			}
+		}
+	}
+
+	.description-services {
+		top: 0;
+
+		.alt-btn {
+			margin: 0 0 20px;
+			font-size: 14px;
+			width: 130px;
+		}
+	}
+
+	.description-services-mob {
+		.back-arrow {
+			display: inline-block;
+			transform: rotate(180deg);
+			margin: 20px 15px 0;
+			padding-right: 15px;
+			text-align: right;
+		}
+
+		.content-services {
+			height: auto;
+			position: relative;
+
+			.service-tabs-title {
+				color: $brand-primary;
+				letter-spacing: 1px;
+				font-size: 2rem;
+			}
+
+			.slick-slide {
+				margin-left: -12px !important;
+			}
+		}
+	}
+}
+
+.section-testimonies {
+	background-color: $brand-primary;
+	height: auto !important;
+	padding: 30px 0;
+
+	@include minw($mq-sm) {
+		padding: 60px 0;
+	}
+
+	.fp-tableCell {
+		height: auto !important;
+	}
+
+	.title {
+		color: $brand-secondary;
+		margin-bottom: 15px;
+		margin-left: 15px;
+		font-size: 30px;
+
+		@include minw($mq-md) {
+			font-size: 40px;
+			margin-top: 0;
+			margin-bottom: 30px;
+			margin-left: 25px;
+		}
+	}
+
+	.testimony-list {
+		padding: 0;
+		opacity: 0;
+
+		&.slick-initialized {
+			opacity: 1;
+			transition: opacity 3s ease-out;
+		}
+
+		.card {
+			border: 3px solid $brand-secondary;
+			border-radius: 17px;
+			height: 352px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			margin: 15px;
+			padding: 20px;
+			position: relative;
+
+			@include minw(740px) {
+				height: 325px;
+			}
+
+			@include minw($mq-sm) {
+				height: 352px;
+			}
+
+			@include minw($mq-md) {
+				margin: 15px 25px;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			svg {
+				position: absolute;
+
+				@include maxw($mq-sm) {
+					width: 37px;
+				}
+			}
+
+			&--deco {
+				&__top {
+					top: -15px;
+					left: 17px;
+				}
+
+				&__bottom {
+					bottom: -15px;
+					right: 17px;
+				}
+			}
+
+			&--logo {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 12px;
+
+				img {
+					@include maxw($mq-sm) {
+						width: 140px;
+					}
+				}
+			}
+
+			&--text {
+				color: $white;
+				font-family: $font-axiforma-light;
+				font-size: 14px;
+			}
+
+			&--author {
+				color: $brand-secondary;
+				font-family: $font-axiforma-bold;
+				font-size: 16px;
+
+				@include minw($mq-sm) {
+					font-size: 18px;
+				}
+			}
+		}
+
+		.slick-dots {
+			margin-top: 0.5em;
+
+			@include maxw(500px) {
+				margin-top: 25px;
+			}
+
+			@include minw($mq-sm) {
+				margin-top: 25px;
+			}
+
+			@include minw($mq-md) {
+				margin: 25px 0;
+			}
+
+			button {
+				width: 10px;
+				height: 10px;
+				border: 1px solid $brand-secondary;
+				background-color: transparent;
+				margin: 0 3px;
+			}
+
+			.slick-active {
+				button {
+					background-color: $brand-secondary;
+				}
+			}
+		}
+	}
+}
+
+.section-customers {
+	height: auto !important;
+	padding: 30px 0;
+
+	.fp-tableCell {
+		height: auto !important;
+	}
+
+	.title {
+		color: $brand-primary;
+		margin-bottom: 15px;
+		margin-left: 15px;
+		font-size: 30px;
+
+		@include minw($mq-md) {
+			font-size: 40px;
+			margin-top: 30px;
+			margin-left: 25px;
+		}
+	}
+
+	.description {
+		color: $brand-primary;
+		font-family: $font-axiforma-regular;
+		font-size: 18px;
+		margin: 0 15px;
+
+		@include minw($mq-md) {
+			font-size: 24px;
+			margin: 0 25px;
+		}
+
+		strong {
+			font-family: $font-axiforma-medium;
+
+			span {
+				font-family: $font-axiforma-medium;
+			}
+		}
+	}
+
+	.customer-list {
+		list-style: none;
+		padding: 0;
+		margin-top: 10px;
+		margin-bottom: 0;
+		opacity: 0;
+
+		&.slick-initialized {
+			opacity: 1;
+			transition: opacity 3s ease-out;
+		}
+
+		.card {
+			width: fit-content;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 20px;
+
+			@include minw($mq-md) {
+				margin: 20px;
+				height: 120px;
+			}
+
+			img {
+				@include maxw($mq-md) {
+					width: 80%;
+				}
+			}
+		}
+
+		.slick-arrow {
+			background-color: $white;
+			border-radius: 0;
+			height: 100%;
+			padding: 0;
+			margin-top: 0;
+			top: 0;
+			width: 50px;
+
+			&::before {
+				border-color: $brand-primary;
+			}
+		}
+	}
+}
+
+.section-clientes {
+	.section-content-clients {
+		.custom-text {
+			margin-bottom: 20px;
+
+			@include minw($mq-md) {
+				margin-left: 20px;
+				margin-top: 40px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.alt-reds {
+	width: 20px;
+	margin-right: 20px;
+}
+
+// orientation
+.orientation-active {
+	.section-home {
+		&--background {
+			@include minw($mq-xxs) {
+				height: 550px;
+			}
+
+			@include minw($mq-xs) {
+				height: 700px;
+			}
+		}
+
+		.text-services {
+			>svg {
+				@include minw($mq-xxs) {
+					width: 45%;
+				}
+			}
+		}
+	}
+}

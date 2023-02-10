@@ -1,0 +1,19 @@
+ /**
+ * Define fonts
+ */
+
+// @include font-face("name-font", $icon-font-path + "name-font/examname-font", $file-formats: eot woff ttf svg);
+@include font-face("nomove", $font-path + "nomove/No-move", $file-formats: eot woff ttf svg);
+// icons
+@include font-face("icomoon", $font-path + "altimea-icons/icomoon", $file-formats: eot woff ttf svg);
+// Antipasto
+@include font-face("antipasto", $font-path + "antipasto/antipasto_regular-webfont", $file-formats: eot woff woff2 ttf svg);
+ // Family Axiforma
+ @include font-face("Axiforma-Black", $font-path + "axiforma/Axiforma-Black", $file-formats: eot woff woff2 ttf svg);
+ @include font-face("Axiforma-Bold", $font-path + "axiforma/Axiforma-Bold", $file-formats: eot woff woff2 ttf svg);
+ @include font-face("Axiforma-ExtraBold", $font-path + "axiforma/Axiforma-ExtraBold", $file-formats: eot woff woff2 ttf svg);
+ @include font-face("Axiforma-Light", $font-path + "axiforma/Axiforma-Light", $file-formats: eot woff woff2 ttf svg);
+ @include font-face("Axiforma-Medium", $font-path + "axiforma/Axiforma-Medium", $file-formats: eot woff woff2 ttf svg);
+ @include font-face("Axiforma-Regular", $font-path + "axiforma/Axiforma-Regular", $file-formats: eot woff woff2 ttf svg);
+ @include font-face("Axiforma-SemiBold", $font-path + "axiforma/Axiforma-SemiBold", $file-formats: eot woff woff2 ttf svg);
+ @include font-face("Axiforma-Thin", $font-path + "axiforma/Axiforma-Thin", $file-formats: eot woff woff2 ttf svg);

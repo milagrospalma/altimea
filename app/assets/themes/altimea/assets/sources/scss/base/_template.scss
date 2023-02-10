@@ -1,0 +1,180 @@
+.btn-menu {
+	display: block;
+	width: 40px;
+	height: 24px;
+	position: relative;
+
+	i {
+		line-height: 0;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		border-top-width: 2px;
+		border-top-style: solid;
+		border-top-color: $brand-secondary;
+		transition: all 0.5s;
+
+		&:nth-child(1) {
+			top: 0;
+			width: 80%;
+		}
+
+		&:nth-child(2) {
+			top: 50%;
+		}
+
+		&:nth-child(3) {
+			top: 99%;
+			width: 80%;
+		}
+	}
+
+	&:hover {
+		i {
+			&:nth-child(1) {
+				width: 100%;
+			}
+
+			&:nth-child(2) {
+				width: 70%;
+			}
+
+			&:nth-child(3) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.sidenav-menu-links {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1040;
+	width: 65%;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+
+		li {
+			a {
+				display: inline-block;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// sidebar right
+.sidenav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	z-index: 1999;
+	transition: all 0.5s ease;
+	transform-origin: 100% 50%;
+	transform: perspective(600px) rotateY(-91deg);
+
+	&.open {
+		transform: perspective(600px) rotateY(0deg);
+	}
+
+	.close {
+		font-weight: 300;
+		font-size: 50px;
+		text-shadow: none !important;
+		opacity: 1;
+		color: $brand-secondary;
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		transition: all 0.3s;
+		z-index: 99;
+
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	.alert {
+		margin-top: -10px;
+	}
+}
+
+// for contact funcionability
+#form-contact,
+#form-contact-service {
+	.alert {
+		display: none;
+	}
+}
+
+.alert-msg-send-form {
+	display: none;
+}
+
+input.error {
+	border: 1px solid $brand-danger;
+}
+
+.overlayy {
+	display: none;
+	position: fixed;
+	background: black;
+	opacity: 0.7;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999999;
+}
+
+/** LOADER */
+.spinner {
+	display: none;
+	position: absolute;
+	z-index: 999999;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	border-radius: 100%;
+	-webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+	animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+	0% {
+		-webkit-transform: scale(0)
+	}
+
+	100% {
+		-webkit-transform: scale(1.0);
+		opacity: 0;
+	}
+}
+
+@keyframes sk-scaleout {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	100% {
+		-webkit-transform: scale(1.0);
+		transform: scale(1.0);
+		opacity: 0;
+	}
+}

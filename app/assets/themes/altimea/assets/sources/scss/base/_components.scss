@@ -1,0 +1,91 @@
+.btn-mouse{
+	display: block;
+	width: 26px;
+	height: 47px;
+	box-sizing: border-box;
+	border: 2px solid $brand-secondary;
+	border-radius: 23px;
+	position: relative;
+	.mouse-movement{
+		position: absolute;
+		display: block;
+		top: 29%;
+		left: 50%;
+		width: 6px;
+		height: 6px;
+		margin: -3px 0 0 -3px;
+		background: $brand-secondary;
+		border-radius: 50%;
+		-webkit-animation: scroll-ani 2s linear infinite;
+		-moz-animation: scroll-ani 2s linear infinite;
+		animation: scroll-ani 2s linear infinite;
+	}
+	&.btn-mouse-dark{
+		border: 2px solid $black;
+		.mouse-movement{
+			background: $black;
+		}
+	}
+}
+
+// form transparent
+.form-tranparent{
+	text-align: center;
+	padding: 30px 50px;
+	border-radius: 5px 5px 0 0;
+	background: rgba(0,0,0,0.6);
+	input.form-control,.btn{
+		height: 40px;
+	}
+}
+
+.social-buttons{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	a{
+		text-align: center;
+		display: inline-block;
+		margin-left: 8px;
+		margin-right: 8px;
+		width: 50px;
+		height: 50px;
+		border: 1px solid $white;
+		font-size: 1.5em;
+		line-height: 2.5;
+		color: $white !important;
+		transform: rotate(-45deg);
+		span{
+			display: inline-block;
+			transform: rotate(45deg) translateX(3px);
+		}
+	}
+}
+
+.btn-lg{
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.btn-line{
+	background-color: transparent;
+	border-radius: 7px;
+	border: 2px solid $white !important;
+	color: $white;
+	text-transform: uppercase;
+	transition: all 0.1s;
+	&:hover,&:focus{
+		color: $white;
+		background: $brand-primary;
+		border: 2px solid $brand-primary !important;
+		box-shadow: none;
+	}
+	&.btn-line-dark{
+		border: 2px solid $black !important;
+		color: $black;
+		&:hover,&:focus{
+			color: $white;
+			background: $black;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+		}
+	}
+}

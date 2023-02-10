@@ -1,0 +1,43 @@
+// ==== CONFIGURATION ==== //
+
+// Set all your configuration variables here!
+$theme-name:               "Altimea";
+$theme-uri:                "https://github.com/TEAMALTIMEA/altimea";
+$theme-author:             "Altimea S.A.C.";
+$theme-author-uri:         "http://altimea.com";
+$theme-description:        "Plantilla desarrollada para la página oficial de Altimea";
+$theme-version:            "1.0.0";
+$theme-text-domain:        "altimea";
+$theme-text-domain-path:   "/languages/";
+
+/**
+ * Path to images to read from css
+ */
+$imagesPath: 'images/';
+
+/**
+ * Colors
+ */
+$brand-primary: #002C6B;
+$brand-secondary: #00F9C1;
+$brand-danger: #d1202a;
+$black: #000;
+$white: #fff;
+$gray-light: #595959;
+$gray-thin: #b3b3b3;
+
+/**
+ * Fonts
+ */
+$font-path: 'fonts/';
+
+$font-fira: 'Fira Sans', sans-serif;
+$font-nomove: "nomove", sans-serif;
+
+$font-axiforma-extrabold: 'Axiforma-ExtraBold', sans-serif, helvetica;
+$font-axiforma-bold: 'Axiforma-Bold', sans-serif, helvetica;
+$font-axiforma-black: 'Axiforma-Black', sans-serif, helvetica;
+$font-axiforma-regular: 'Axiforma-Regular', sans-serif, helvetica;
+$font-axiforma-medium: 'Axiforma-Medium', sans-serif, helvetica;
+$font-axiforma-light: 'Axiforma-Light', sans-serif, helvetica;
+$font-axiforma-thin: 'Axiforma-Thin', sans-serif, helvetica;

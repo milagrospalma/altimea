@@ -1,0 +1,241 @@
+.services-full{
+    width: 100vw;
+    height: 100vh;
+    display: table;
+    background-color: $brand-secondary;
+    &.open{
+        display: none;
+        background-color: $white;
+        .services-full-item{
+            width: 0;
+            padding: 0;
+            &.active{
+                padding-left: 15px;
+                padding-right: 15px;
+                display: table-cell !important;
+                width: 100% !important;
+                .zoom-0{
+                    transition:all 0.5s;
+                    opacity: 0;
+                    transform:scale(0) translateX(-200px);
+                }
+                i{
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+                    background: $white;
+                    animation: iconDismis 1.5s;
+                }
+            }
+
+        }
+    }
+    .services-full-item {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        height: 100vh;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: $brand-primary;
+        transition: all 1.5s;
+        opacity: 0.5;
+        border-right: solid 1px #009b82;
+        counter-increment: service-number;
+		width: 20%;
+
+        &:nth-child(2){
+            background-color: $brand-secondary;
+        }
+        &:nth-child(3){
+            background-color: $brand-secondary;
+        }
+        &:nth-child(4){
+            background-color: $brand-secondary;
+        }
+    }
+}
+
+.description-services{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    .description-services-content{
+        display: table;
+        width: 100%;
+        height: 100%;
+        .description-services-content-middle{
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    .description-services-img{
+        text-align: right;
+        position: absolute;
+        right: 4%;
+        bottom: 10%;
+        width: 50%;
+        top: 8%;
+        &:first-child{
+            text-align: left;
+            top: 10%;
+        }
+        img {
+            width: 70%;
+        }
+    }
+}
+
+.service-description-tabs {
+    position: relative;
+    color: $gray-light;
+	.services-go-back {
+		margin: 0 0 20px 0;
+		font-size: 14px;
+		width: 130px;
+	}
+    .tabs-vertical-icons{
+        margin: 0;
+        padding: 0;
+        width: 130px;
+        text-align: center;
+        position: relative;
+        float: left;
+        border-right: 2px solid hsl(215, 100%, 21%);
+        > li{
+            list-style: none;
+            margin-bottom: 45px;
+            margin-top: 25px;
+            a{
+                text-decoration: none !important;
+                line-height: 1;
+                font-size: 13px;
+                color: inherit;
+                opacity: 0.5;
+                display: block;
+                padding: 10px 10px 12px;
+                color: $gray-light;
+                text-transform: uppercase;
+            }
+        }
+        > li.active{
+            a{
+                background-color: $brand-secondary;
+                color: $brand-primary;
+                opacity: 1;
+            }
+        }
+    }
+    >.tab-content{
+        padding-left: 0;
+        float: right;
+        width: 70%;
+        font-family: $font-axiforma-regular;
+        .service-tabs-title{
+            letter-spacing: 0.88px;
+            font-size: 40px;
+            color: $brand-primary;
+        }
+        .service-tabs-icon{
+            height: 40px;
+            i{
+                font-size: 50px;
+                position: relative;
+                left: -3px;
+            }
+        }
+    }
+}
+
+.tabs-numbers{
+    margin-top: 30px;
+    .tabs-numbers-head{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            &.active{
+                a{
+                    .tabs-numbers-num{
+                        color: #0198c3;
+                        background: $white;
+                    }
+                }
+            }
+            a{
+				min-height: 100px;
+                text-decoration: none !important;
+                color: inherit;
+                text-transform: uppercase;
+                display: flex;
+				align-items: center;
+				justify-content: center;
+                text-align: center;
+                border: 2px solid $brand-secondary;
+				@include minw(md) {
+					min-height: 135px;
+				}
+
+                .tabs-numbers-num{
+                    font-family: $font-nomove;
+                    font-weight: bold;
+                    display: inline-block;
+                    font-size: 25px;
+                    line-height: 1.8;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 2px solid $white;
+                }
+                .tabs-numbers-title{
+                    display: block;
+                    margin-top: 10px;
+                    font-weight: 600;
+                    font-size: 13px;
+                    padding: 10%;
+                    color: $brand-primary;
+
+                }
+            }
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+                a{
+                    border-left: none;
+                }
+
+            }
+        }
+    }
+    .tabs-numbers-body{
+        border-top: 1px solid rgba(255,255,255,0.7);
+        padding: 15px 10px;
+        margin-top: 10px;
+        p{
+            font-size: 13px;
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+}
+
+.service-description-tabs {
+    .tabs-numbers-head {
+        li {
+            &.active {
+                .tabs-numbers-num {
+                    background: transparent !important;
+                    color: $white !important;
+                }
+            }
+            a {
+                cursor: default !important;
+            }
+        }
+    }
+}

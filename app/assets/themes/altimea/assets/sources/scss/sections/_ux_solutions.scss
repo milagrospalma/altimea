@@ -1,0 +1,212 @@
+.page-ux {
+
+	.alt-category-general {
+		span {
+			color: $white;
+		}
+	}
+
+	.alt-softwf {
+		background: $brand-secondary;
+		&__flex {
+			&__col {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				.atl-Mob {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.section-analytic {
+		background-color: $brand-primary;
+		overflow-x: hidden;
+		.analytic-carousel {
+			display: block;
+			@include minw(xs) {
+				display: none;
+			}
+		}
+		.analytic-block {
+			display: none;
+			@include minw(xs) {
+				display: flex;
+				justify-content: center;
+				padding: 30px 0;
+			}
+		}
+		.carousel-card {
+			margin: 25px 25px;
+			background-color: $white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 40px 20px;
+			@include minw(xs) {
+				min-width: 33%;
+			}
+			&-icon {
+				width: 100px;
+				height: 100px;
+				margin-bottom: 20px;
+			}
+			&-title {
+				margin-bottom: 20px;
+				h2 {
+					font-family: $font-axiforma-extrabold;
+					text-transform: uppercase;
+					color: $brand-primary;
+					font-size: 18px;
+					line-height: 24px;
+					text-align: center;
+					letter-spacing: 0.75px;
+				}
+			}
+			&-description {
+				margin-bottom: 20px;
+				p {
+					font-family: $font-axiforma-regular;
+					font-size: 14px;
+					line-height: 24px;
+					text-align: justify;
+					text-align-last: center;
+					color: $gray-light;
+				}
+			}
+			&-nav {
+				position: relative;
+				margin-bottom: 50px;
+
+				.slick-list {
+					overflow: visible;
+				}
+				.slick-dots {
+					bottom: 20px;
+					right: 0;
+					left: -20px;
+					@include minw(1100px) {
+						left: 0;
+					}
+					li {
+						margin: 0;
+					}
+					.slick-active {
+						button {
+							background: $brand-secondary;
+						}
+					}
+					button {
+						width: 40px;
+						height: 8px;
+						border-radius: 0;
+						margin: 5px;
+						background: $brand-primary;
+						@include minw(1100px) {
+							width: 30px;
+							height: 5px;
+						}
+					}
+				}
+			}
+			&-btn {
+				width: 80%;
+				.alt-btn {
+					display: flex;
+					align-content: center;
+					width: 100%;
+					max-width: none;
+					font-size: 14px;
+					padding: 25px 0;
+					@include minw(xs) {
+						max-width: none;
+					}
+				}
+				.alt-btn--form {
+					@extend .alt-btn;
+					margin: 0;
+					@include minw(xs) {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	.section-track {
+		padding: 0;
+		background: #191e24;
+
+		@include minw(xs) {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+		.image {
+			position: relative;
+			overflow: hidden;
+			@include minw(xs) {
+				width: 60%;
+			}
+			&-layer {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #191e24;
+				opacity: 0.5;
+				z-index: 1;
+			}
+
+			img {
+				filter: grayscale(1);
+				width: calc(100% + 150px);
+				margin-left: -55px;
+			}
+		}
+		.track-left {
+			@include minw(xs) {
+				width: 40%;
+				padding-left: 80px;
+			}
+		}
+		.track-cont {
+			padding: 40px 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			@include minw(xs) {
+				padding: 0;
+			}
+			.logo-container {
+				text-align: center;
+			}
+			h2 {
+				font-family: $font-axiforma-bold;
+				width: 50%;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+				text-align: center;
+				color: $white;
+				font-size: 18px;
+				line-height: 24px;
+				margin: 30px 0;
+			}
+			p {
+				width: 70%;
+				text-align: center;
+				color: $white;
+				font-size: 13px;
+				line-height: 22px;
+				font-family: $font-axiforma-regular;
+			}
+		}
+	}
+	.section-contact {
+		padding-top: 85px;
+	}
+}

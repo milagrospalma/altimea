@@ -1,0 +1,107 @@
+<?php
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_contacto',
+		'title' => 'Contacto',
+		'fields' => array (
+			array (
+				'key' => 'field_contact_name',
+				'label' => 'Nombre',
+				'name' => 'contact_name',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_contact_email',
+				'label' => 'Email',
+				'name' => 'contact_email',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_contact_phone',
+				'label' => 'Teléfono',
+				'name' => 'contact_telephone',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_contact_business',
+				'label' => 'Empresa',
+				'name' => 'contact_business',
+				'type' => 'text',
+				'required' => 0,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_contact_message',
+				'label' => 'Mensaje',
+				'name' => 'contact_message',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
+			),
+			array (
+				'key' => 'field_contact_origin',
+				'label' => 'Origen de la inscripción',
+				'name' => 'contact_origin',
+				'type' => 'select',
+				'required' => 1,
+				'choices' => array (
+					'sidebar' => 'Sidebar',
+					'landing_ux' => 'Landing: UX Solution',
+					'landing_somosbelcorp' => 'Landing: Somos Belcorp',
+					'landing_agile-tables' => 'Agile-tables',
+				),
+				'default_value' => 'sidebar',
+				'allow_null' => 0,
+				'multiple' => 0,
+			)
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'contacts',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+	));
+}

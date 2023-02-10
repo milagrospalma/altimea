@@ -1,0 +1,504 @@
+.altm-header {
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	transition: 0.3s all ease;
+	&.bgcolor-on-scroll,
+	&.header-dark {
+		background-color: $brand-primary;
+		box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.1);
+	}
+	&.pos-initial {
+		position: initial;
+	}
+	.alt-header--content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 75px;
+		padding: 0 15px;
+		@include minw($mq-md) {
+			height: 90px;
+			margin: 0 auto;
+			width: 1170px;
+		}
+		.navbar-toggle-menu {
+			height: 100%;
+			cursor: pointer;
+			display: inline-block;
+			@include minw($mq-md) {
+				display: none;
+			}
+			.btn-menu {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		.logo {
+			display: none;
+			@include minw($mq-md) {
+				display: flex;
+			}
+		}
+		.general {
+			display: flex;
+			gap: 25px;
+			nav {
+				display: none;
+				@include minw($mq-md) {
+					display: inline-block;
+				}
+			}
+			.common-options {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				.navbar-toggle-sidenav {
+					display: flex;
+					svg:hover path {
+						fill: $brand-secondary;
+					}
+				}
+			}
+		}
+
+		.btn-menu {
+			display: flex;
+			@include minw($mq-md) {
+				display: none;
+			}
+		}
+	}
+	.sidenav-menu-links {
+		background-image: url($imagesPath + 'mob-menu-logo.svg');
+		background-repeat: no-repeat;
+		background-position: center 75%;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        bottom: 0;
+        z-index: 1999;
+        background: $brand-secondary;
+        transform-origin: 100% 50%;
+        transform: perspective(600px) rotateY(91deg);
+        transition: all 0.5s;
+        padding: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+		@include minw($mq-md) {
+			display: none;
+		}
+        &.open {
+            &.invisible {
+                visibility: visible;
+            }
+            transform: perspective(600px) rotateY(0deg);
+        }
+        .close{
+            float: left;
+            text-shadow: none !important;
+            opacity: 1;
+            color: $brand-primary;
+            transition: all 0.3s;
+            z-index: 99;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+		.sidenav-menu-logo {
+			position: absolute;
+			bottom: 20%;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.sidenav-menu-footer {
+			position: absolute;
+			left: 0;
+			bottom: 45px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 50px;
+			width: 100%;
+			.jobs {
+				.title {
+					color: $brand-primary;
+					font-family: $font-axiforma-bold;
+					font-size: 18px;
+					margin-bottom: 3px;
+				}
+				.description {
+					color: $brand-primary;
+					cursor: pointer;
+					font-family: $font-axiforma-regular;
+					font-size: 16px;
+					text-decoration: underline;
+					white-space: nowrap;
+					padding: 10px 0;
+				}
+			}
+			.social-media {
+				margin: 0;
+				ul {
+					display: flex;
+					gap: 20px;
+				}
+			}
+		}
+	}
+	.menu-options {
+		display: flex;
+		margin-bottom: 0;
+		padding: 0;
+		list-style: none;
+		font-family: $font-axiforma-regular;
+		font-size: 16px;
+		flex-direction: column;
+		gap: 15px;
+		@include minw($mq-md) {
+			flex-direction: row;
+			gap: 0;
+		}
+		li {
+			@include minw($mq-md) {
+				margin: 0 10px;
+				position: relative;
+			}
+			a {
+				color: $brand-primary;
+                display: flex;
+                align-items: center;
+				justify-content: flex-start;
+				transition: 0.2s ease-out;
+				text-decoration: none;
+				font-size: 16px;
+				gap: 15px;
+				padding: 10px 15px 10px 5px;
+				@include minw($mq-md) {
+					color: $white;
+					justify-content: center;
+                    gap: 10px;
+					padding: 5px 5px 0;
+				}
+				&:hover {
+					color: $brand-primary;
+					transition: 0.2s ease-out;
+					@include minw($mq-md) {
+						color: $brand-secondary;
+                        .menu-arrow {
+                            path {
+                                fill: $brand-secondary;
+                            }
+                        }
+					}
+				}
+				&.active {
+					@include maxw($mq-md) {
+						font-family: $font-axiforma-bold;
+						transition: 0.3s ease-out;
+					}
+				}
+				.menu-arrow {
+					transition: 0.3s ease-out;
+                    path {
+                        @include minw($mq-md) {
+                            fill: $white;
+                        }
+                    }
+                }
+			}
+		}
+		.container-submenu {
+            display: none;
+            @include minw($mq-md) {
+                position: absolute;
+				width: 290px;
+				top: 40px;
+				left: -90%;
+            }
+			ul {
+				padding-left: 10px;
+				display: flex;
+				flex-direction: column;
+                list-style: none;
+				gap: 10px;
+				@include minw($mq-md) {
+					background: $white;
+					border-radius: 20px;
+					box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+					align-items: flex-start;
+					padding: 20px 0;
+					gap: 6px;
+				}
+				&::before {
+					@include minw($mq-md) {
+						content: '';
+						position: absolute;
+						top: -7px;
+						left: 50%;
+						right: 50%;
+						background: $white;
+						width: 15px;
+						height: 15px;
+						box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+						transform: rotate(45deg);
+						z-index: -1;
+					}
+				}
+				li {
+					@include minw($mq-md) {
+						width: 100%;
+    					margin: 0;
+					}
+					a {
+						font-size: 16px;
+						padding: 5px;
+						gap: 5px;
+						@include minw($mq-md) {
+							color: $brand-primary;
+							justify-content: flex-start;
+							line-height: 1.5;
+							padding: 3px 13px;
+						}
+						&:hover {
+							@include minw($mq-md) {
+								background: $brand-secondary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.sidenav-form {
+	background-image: url($imagesPath + 'sidenav/form-background-md.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	height: 100vh;
+	&.scroll-contact {
+		overflow-y: auto;
+	}
+}
+
+.sidenav-form-contact {
+	color: $white;
+	font-family: $font-axiforma-regular;
+	margin: 0 auto;
+	padding: 0px 20px;
+	width: 100%;
+	@include minw($mq-md) {
+		padding: 0px 40px;
+		width: 95%;
+		height: auto;
+		margin: 4em auto;
+	}
+	.form-contact {
+		width: 100%;
+		margin: 3em auto;
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		@include minw($mq-sm) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-auto-rows: minmax(100px, auto);
+			column-gap: 100px;
+			margin: 0 auto;
+		}
+		@include minw($mq-md) {
+			width: 90%;
+		}
+		&--text {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			> svg {
+				margin-bottom: 2em;
+				width: 40%;
+				@include minw($mq-xs) {
+					width: 25%;
+					margin-bottom: 1em;
+				}
+				@include minw($mq-md) {
+					margin-bottom: 9em;
+					width: auto;
+				}
+			}
+			.title {
+				font-family: $font-axiforma-extrabold;
+				color: $brand-secondary;
+				display: block;
+				font-size: 40px;
+				text-transform: capitalize;
+				letter-spacing: 0;
+				margin: 0;
+				@include minw($mq-md) {
+					font-size: 50px;
+				}
+			}
+			.line {
+				background-color: $brand-secondary;
+				height: 3px;
+				width: 125px;
+				margin: 15px 0;
+				@include minw($mq-md) {
+					margin: 22px 0;
+				}
+			}
+			.description {
+				font-size: 16px;
+				@include minw($mq-md) {
+					font-size: 18px;
+					padding-right: 6em;
+				}
+				p {
+					margin-bottom: 1em;
+
+					@include minw($mq-md) {
+						margin-bottom: 1.5em;
+					}
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+		}
+		&--form {
+			grid-column: 2;
+			grid-row: 1/3;
+
+			.form-container {
+				border: 3px solid $brand-secondary;
+				border-radius: 30px;
+				padding: 20px;
+			}
+			.alert-small {
+				border-radius: 10px;
+			}
+			.form-group {
+				margin-bottom: 12px;
+				&.fg-policy {
+					display: flex;
+					align-items: flex-start;
+					gap: 7px;
+					@include minw($mq-sm) {
+						align-items: center;
+					}
+					> input {
+						cursor: pointer;
+						border: 1px solid #969696;
+						border-radius: 50%;
+						margin: 0;
+						min-width: 18px;
+						height: 18px;
+						transition: box-shadow 0.3s;
+						appearance: none;
+						-webkit-appearance: none;
+						&:checked {
+							border: 1px solid $brand-secondary;
+							box-shadow: inset 0 0 0 9px $brand-secondary;
+						}
+					}
+					> .form-label {
+						font-size: 12px;
+						line-height: 1.5;
+						margin: 0;
+						@include minw($mq-md) {
+							line-height: 1;
+						}
+					}
+				}
+			}
+			.form-label {
+				font-family: $font-axiforma-thin;
+				font-size: 14px;
+				margin-bottom: 2px;
+			}
+			.form-control {
+				border: none;
+				background-color: rgba(255, 255, 255, 0.1);
+				border-radius: 60px;
+				color: $white;
+				font-size: 16px;
+				height: 46px;
+				padding-left: 20px;
+				padding-right: 20px;
+				&:invalid {
+					color: $brand-danger;
+				}
+				&.message {
+					border-radius: 15px;
+					height: 85px;
+					padding: 17px 20px;
+					textarea {
+						background-color: transparent;
+						width: 100%;
+						resize: none;
+						border: none;
+						height: 100%;
+						&::-webkit-scrollbar {
+							width: 5px;
+							height: 7px;
+						}
+						&::-webkit-scrollbar-thumb {
+							background: rgba(255, 255, 255, 0.555);
+							border-radius: 3px;
+							&:active {
+								background: $white;
+							}
+						}
+						&::-webkit-scrollbar-track {
+							background: rgba(0, 45, 107, 0.555);
+							border-radius: 50px;
+						}
+					}
+				}
+				&.error {
+					border: 1px solid $brand-danger;
+				}
+			}
+			.form-button {
+				background: $brand-secondary;
+				border: 1px solid $brand-secondary;
+				border-radius: 50px;
+				color: $brand-primary;
+				font-family: $font-axiforma-bold;
+				font-size: 16px;
+				height: 46px;
+				padding: 13px 24px;
+				min-width: 184px;
+				&:disabled {
+					background: #6bb4a5;
+					border-color: #6bb4a5;
+					color: #686d74;
+				}
+			}
+		}
+		&--social {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+	}
+}
+
+.orientation-active {
+	.sidenav-menu-links {
+		overflow-y: scroll;
+		.sidenav-menu-footer {
+			position: relative;
+			padding: 0;
+			bottom: 0;
+		}
+	}
+}

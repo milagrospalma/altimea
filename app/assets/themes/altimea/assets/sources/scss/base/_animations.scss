@@ -1,0 +1,63 @@
+@keyframes scroll-ani {
+	0% {
+		opacity: 1;
+		top: 29%;
+	}
+	15% {
+		opacity: 1;
+		top: 50%;
+	}
+	50% {
+		opacity: 0;
+		top: 50%;
+	}
+	100% {
+		opacity: 0;
+		top: 29%;
+	}
+	
+}
+
+
+@keyframes iconDismis {
+	0% {
+		transform:scale(1);
+	}
+	15% {
+		transform:scale(1.5);
+	}
+	50% {
+		transform:scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform:scale(0);
+	}
+}
+
+.animation-delay-10 {
+  -webkit-animation-delay: 1s !important;
+  -moz-animation-delay: 1s !important;
+  -ms-animation-delay: 1s !important;
+  -o-animation-delay: 1s !important;
+  animation-delay: 1s !important;
+}
+.animation-delay-15 {
+  -webkit-animation-delay: 1.5s !important;
+  -moz-animation-delay: 1.5s !important;
+  -ms-animation-delay: 1.5s !important;
+  -o-animation-delay: 1.5s !important;
+  animation-delay: 1.5s !important;
+}
+.animation-delay-20 {
+  -webkit-animation-delay: 2s !important;
+  -moz-animation-delay: 2s !important;
+  -ms-animation-delay: 2s !important;
+  -o-animation-delay: 2s !important;
+  animation-delay: 2s !important;
+}
+
+.rotated {
+	transform: rotate(180deg);
+	transition: 0.3s ease-out;
+}

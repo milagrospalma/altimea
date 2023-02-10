@@ -1,0 +1,32 @@
+.section-404{
+	background: $brand-primary;
+	color: $white;
+	height: 80vh;
+    display: flex;
+    align-items: center;
+	.container-content{
+		vertical-align: middle !important;
+	}
+	.text-404{
+		margin-top: 30px;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		font-size: 30px;
+		font-family: $font-axiforma-regular;
+	}
+	.img-404{
+		margin: 0 auto;
+		max-width: 350px;
+	}
+	.btn{
+		span{
+			display: inline-block;
+			transform: scale(1.5,2.5) translate(-3px, -1px);
+		}
+	}
+}
+@media (max-width:480px) {
+	.section-404 .text-404{
+		font-size: 17px;
+	}
+}
