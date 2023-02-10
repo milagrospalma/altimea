@@ -40,6 +40,9 @@ browsersync: {
         * sudo npm install -g gulp
 * Abrir una terminal en **app/assets/themes-developing/altimea/** y ejectuar los siguientes comandos:
     * npm install
+* Copiar los archivos Jenkins y Dockerfile de **project_files_templates** a la carpeta **altimea/**
+* Renombrar la carpeta **altimeafactory-disabled**
+* Copiar el archivo htaccess de **project_files_templates** a la carpeta **altimea/app/**
 * Ejecutar la primera construcción de la plantilla con el siguiente comando dentro de la misma terminal que la anterior:
     * gulp build
 * El comando anterior debió de generar una nueva carpeta de nombre 'build' que será donde esten los archivos que se van a cargar en WordPress
